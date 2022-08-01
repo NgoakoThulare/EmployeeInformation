@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EmployeeInformation</name>
+    </assembly>
+    <members>
+        <member name="T:EmployeeInformation.AppSettings">
+            <summary>
+            Application settings configuration.
+            </summary>
+        </member>
+        <member name="P:EmployeeInformation.AppSettings.SecretKey">
+            <summary>
+            Client secret.
+            </summary>
+        </member>
+        <member name="P:EmployeeInformation.AppSettings.FilePath">
+            <summary>
+            File path.
+            </summary>
+        </member>
+        <member name="P:EmployeeInformation.AppSettings.FileName">
+            <summary>
+            Name of file.
+            </summary>
+        </member>
+        <member name="P:EmployeeInformation.AppSettings.UsersFile">
+            <summary>
+            Name of users file.
+            </summary>
+        </member>
+        <member name="T:EmployeeInformation.Controllers.EmployeeController">
+            <summary>
+            Employee controller manages employee information
+            </summary>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.EmployeeController.#ctor(EmployeeInformation.Services.IEmployeeService)">
+            <summary>
+            Employee service contains employee management operations.
+            </summary>
+            <param name="employeeService"></param>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.EmployeeController.GetEmployees">
+            <summary>
+            Returns a list of employees.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.EmployeeController.GetEmployee(System.Int32)">
+            <summary>
+            Gets individual employee.
+            </summary>
+            <param name="id">Employee id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.EmployeeController.CreateEmployee(Model.Employee)">
+            <summary>
+            Creates employee.
+            </summary>
+            <param name="employee">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.EmployeeController.UpdateEmployee(System.Int32,Model.Employee)">
+            <summary>
+            Updates employee.
+            </summary>
+            <param name="id">Employee id.</param>
+            <param name="employee">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.EmployeeController.DeleteEmployee(System.Int32)">
+            <summary>
+            Removes employee. 
+            </summary>
+            <param name="id">Employee id.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EmployeeInformation.Controllers.UserController">
+            <summary>
+            User controller.
+            </summary>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.UserController.#ctor(EmployeeInformation.Services.IUserService)">
+            <summary>
+            User service.
+            </summary>
+            <param name="userService"></param>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.UserController.Authenticate(System.String,System.String)">
+            <summary>
+            Authenticates user.
+            </summary>
+            <param name="Username">Registered username.</param>
+            <param name="Password">Registered password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Controllers.UserController.CreateUser(System.String,System.String,Model.Enums.Role)">
+            <summary>
+            Registers user.
+            </summary>
+            <param name="Username">Required username.</param>
+            <param name="Password">Required password.</param>
+            <param name="Role">User role.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EmployeeInformation.Repository.FileStoreRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EmployeeInformation.Repository.FileStoreRepository.#ctor(Microsoft.Extensions.Options.IOptions{EmployeeInformation.AppSettings})">
+            <summary>
+            Configuration settings object.
+            </summary>
+            <param name="appSettings"></param>
+        </member>
+        <member name="M:EmployeeInformation.Repository.FileStoreRepository.GetAll">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Repository.FileStoreRepository.GetEmployee(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Repository.FileStoreRepository.AddEmployee(Model.Employee)">
+            <summary>
+            
+            </summary>
+            <param name="employee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Repository.FileStoreRepository.UpdateEmployee(Model.Employee)">
+            <summary>
+            
+            </summary>
+            <param name="employee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Repository.FileStoreRepository.DeleteEmployee(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EmployeeInformation.Repository.IRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EmployeeInformation.Repository.IRepository.GetAll">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Repository.IRepository.GetEmployee(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Repository.IRepository.AddEmployee(Model.Employee)">
+            <summary>
+            
+            </summary>
+            <param name="employee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Repository.IRepository.UpdateEmployee(Model.Employee)">
+            <summary>
+            
+            </summary>
+            <param name="employee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Repository.IRepository.DeleteEmployee(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EmployeeInformation.Services.EmployeeService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EmployeeInformation.Services.EmployeeService.#ctor(EmployeeInformation.Repository.IRepository)">
+            <summary>
+            Configuration settings object.
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:EmployeeInformation.Services.EmployeeService.Create(Model.Employee)">
+            <summary>
+            Creates employee.
+            </summary>
+            <param name="employee">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.EmployeeService.Delete(System.Int32)">
+            <summary>
+            Deletes employee.
+            </summary>
+            <param name="Id">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.EmployeeService.Exists(System.Int32)">
+            <summary>
+            Check if employee exists.
+            </summary>
+            <param name="id">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.EmployeeService.Get(System.Int32)">
+            <summary>
+            Gets individual employee.
+            </summary>
+            <param name="id">Employee id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.EmployeeService.GetAll">
+            <summary>
+            Gets employees.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.EmployeeService.Update(Model.Employee)">
+            <summary>
+            Updates employee.
+            </summary>
+            <param name="employee">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EmployeeInformation.Services.IEmployeeService">
+            <summary>
+            Employee service.
+            </summary>
+        </member>
+        <member name="M:EmployeeInformation.Services.IEmployeeService.GetAll">
+            <summary>
+            Gets employees.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.IEmployeeService.Get(System.Int32)">
+            <summary>
+            Gets individual employee.
+            </summary>
+            <param name="id">Employee id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.IEmployeeService.Create(Model.Employee)">
+            <summary>
+            Creates employee.
+            </summary>
+            <param name="employee">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.IEmployeeService.Update(Model.Employee)">
+            <summary>
+            Updates employee.
+            </summary>
+            <param name="employee">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.IEmployeeService.Delete(System.Int32)">
+            <summary>
+            Deletes employee.
+            </summary>
+            <param name="Id">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.IEmployeeService.Exists(System.Int32)">
+            <summary>
+            Check if employee exists.
+            </summary>
+            <param name="id">Employee object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EmployeeInformation.Services.IUserService">
+            <summary>
+            Employee service.
+            </summary>
+        </member>
+        <member name="M:EmployeeInformation.Services.IUserService.Authenticate(System.String,System.String)">
+            <summary>
+            Authenticates user.
+            </summary>
+            <param name="username">Registered username.</param>
+            <param name="password">Registered password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.IUserService.Register(System.String,System.String,Model.Enums.Role)">
+            <summary>
+            Authenticates user.
+            </summary>
+            <param name="username">Required username.</param>
+            <param name="password">Required password.</param>
+            <param name="role">Required password.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EmployeeInformation.Services.UserService">
+            <summary>
+            User service.
+            </summary>
+        </member>
+        <member name="M:EmployeeInformation.Services.UserService.#ctor(Microsoft.Extensions.Options.IOptions{EmployeeInformation.AppSettings})">
+            <summary>
+            Configuration settings object.
+            </summary>
+            <param name="appSettings"></param>
+        </member>
+        <member name="M:EmployeeInformation.Services.UserService.Authenticate(System.String,System.String)">
+            <summary>
+            Authenticates user.
+            </summary>
+            <param name="username">Registered username.</param>
+            <param name="password">Registered password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeInformation.Services.UserService.Register(System.String,System.String,Model.Enums.Role)">
+            <summary>
+            Registers users of the application.
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

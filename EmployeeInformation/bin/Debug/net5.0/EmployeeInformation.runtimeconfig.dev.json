@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\ngoakot\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ngoakot\\.nuget\\packages"
+    ]
+  }
+}

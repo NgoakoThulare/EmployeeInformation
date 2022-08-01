@@ -1,0 +1,10 @@
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\bin\Debug\netcoreapp3.1\Model.deps.json
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\obj\Debug\netcoreapp3.1\Model.csproj.AssemblyReference.cache
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\obj\Debug\netcoreapp3.1\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\obj\Debug\netcoreapp3.1\Model.AssemblyInfoInputs.cache
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\obj\Debug\netcoreapp3.1\Model.AssemblyInfo.cs
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\obj\Debug\netcoreapp3.1\Model.csproj.CoreCompileInputs.cache
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\obj\Debug\netcoreapp3.1\Model.dll
+C:\Users\ngoakot\source\repos\EmployeeInformation\Model\obj\Debug\netcoreapp3.1\Model.pdb
